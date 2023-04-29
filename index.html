@@ -1,36 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weatherio</title>
-    <link rel="shortcut icon" type="image/png" href="favicon.png'">
-</head>
-<body>
-    <h1>Weatherio</h1>
-    <form action="/" method="post">
-        <input type="text" name= "city" class="search-bar" placeholder="Enter a city name...">
-        <button type="submit" class="search-button">Search
-        </button>
-    </form>
-    <div class="temperature-wrapper">
-        <p class="temperature">${temperature}&deg;C</p>
-        <div class="city-details">
-          <p class="city">${city.title()}</p>
-          <p id="city-time">${city_time} - ${city_date }</p>
-        </div>
-        <div class="weather-type">
-          <p><img src="http://openweathermap.org/img/w/${icon}.png" alt="${description}"></p>
-          <p class="weather-desc">${description}</p>
-        </div>
-      </div>
-      <div class="weather-details">
-        <p>Pressure&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${pressure} hPa</p>
-        <p>Humidity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${humidity}%</p>
-        <p>Visibility&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${visibility} meters</p>
-        <p>Wind speed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${wind_speed} m/s</p>
-        <p>Wind direction&nbsp;&nbsp;&nbsp;${wind_direction}&deg;</p>
-      </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weatherio</title>
+        <link rel="shortcut icon" type="image/png" href="favicon.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <form>
+            <input type="text" id="city-input">
+            <button type="submit" id="submit-button">Get Weather</button>
+          </form>
+          <div id="weather">
+            <div id="weather-inner"></div>
+          </div>
+          <script src="script.js"></script>
+    </body>
 </html>
